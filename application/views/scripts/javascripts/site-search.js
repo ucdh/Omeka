@@ -58,31 +58,5 @@ if (!Omeka) {
                 $('.show-advanced').focus();
             }
         });
-
-        /* 
-        var advancedForm = $('#advanced-form');
-        var searchTextbox = $('#search-form input[type=text]');
-        var searchSubmit = $('#search-form button');
-        console.log(advancedForm.length);
-        if (advancedForm.length > 0) {
-            advancedForm.css("display", "none");
-            $('#search-form').addClass("with-advanced").after('<a href="#" id="advanced-search" class="button">Advanced Search</a>');
-            advancedForm.click(function (event) {
-                event.stopPropagation();
-            });
-            $("#advanced-search").click(function (event) {
-                event.preventDefault();
-                event.stopPropagation();
-                advancedForm.fadeToggle();
-                $(document).click(function (event) {
-                    if (event.target.id == 'query') {
-                        return;
-                    }
-                    advancedForm.fadeOut();
-                    $(this).unbind(event);
-                });
-            });
-        }
-        */
     };
 })(jQuery);
