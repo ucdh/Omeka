@@ -21,9 +21,3 @@
     <?php endif; ?>
     <?php echo $this->formButton('submit_search', $options['submit_value'], array('type' => 'submit')); ?>
 </form>
-<?php echo js_tag('site-search'); ?>
-<script type="text/javascript">
-    jQuery(document).ready(function () {
-        Omeka.showAdvancedForm();
-    });
-</script>
