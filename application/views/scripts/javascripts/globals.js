@@ -15,7 +15,7 @@ if (!Omeka) {
         // Show advanced options for site-wide search.
         Omeka.showAdvancedForm = function () {
             var advanced_form = $('#advanced-form');
-            var show_advanced = '<a href="#" class="show-advanced button">&hellip;</a>';
+            var show_advanced = '<a href="#" class="show-advanced button">Advanced Search</a>';
             var search_submit = $('#search-form button');
     
             /* 
@@ -33,12 +33,13 @@ if (!Omeka) {
             });
         };
         
-        Omeka.megaMenu = function(customMenuOptions) {
+        Omeka.megaMenu = function(menuId, customMenuOptions) {
+
+            if (menuId == null || menuId == "undefined") {
+                var menuId = "primary-nav";
+            }
             
             var menuOptions = {
-                /* Id for targeted menu */
-                menuId: "#primary-nav",
-                
                 /* prefix for generated unique id attributes, which are required
                  to indicate aria-owns, aria-controls and aria-labelledby */
                 uuidPrefix: "accessible-megamenu",
@@ -67,7 +68,7 @@ if (!Omeka) {
             
             $.extend(menuOptions,customMenuOptions);
             
-            $(menuOptions.menuId).accessibleMegaMenu(menuOptions);
+            $('#'+menuId).accessibleMegaMenu(menuOptions);
         };
     });
 })(jQuery);
