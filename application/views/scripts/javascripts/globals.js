@@ -4,8 +4,6 @@ if (!Omeka) {
 
 (function($) {
     $(document).ready(function () {
-        // Provide starting point for focus.
-        jQuery('#username').focus();
     
         // Skip to content
         Omeka.skipNav = function() {
@@ -33,15 +31,6 @@ if (!Omeka) {
                 e.preventDefault();
                 advanced_form.toggleClass('open').toggleClass('closed');
             });
-            $('.show-advanced').keydown(function(e) {
-                var advanced_closed = e.keyCode == 40 && advanced_form.hasClass('closed');
-                var advanced_hidden = e.keyCode == 38 && advanced_form.hasClass('open');
-                if (advanced_closed || advanced_hidden) {
-                    e.preventDefault();
-                    advanced_form.toggleClass('open').toggleClass('closed');
-                }
-            });
-
         };
         
         Omeka.megaMenu = function(customMenuOptions) {
@@ -76,18 +65,9 @@ if (!Omeka) {
                 openClass: "open"
             };
             
-            $.extend(true,menuOptions,customMenuOptions);
+            $.extend(menuOptions,customMenuOptions);
             
-            $(menuOptions.menuId).accessibleMegaMenu({
-              uuidPrefix: menuOptions.uuidPrefix,
-              menuClass: menuOptions.menuClass,
-              topNavItemClass: menuOptions.topNavItemClass,
-              panelClass: menuOptions.panelClass,
-              panelGroupClass: menuOptions.panelGroupClass,
-              hoverClass: menuOptions.hoverClass,
-              focusClass: menuOptions.focusClass,
-              openClass: menuOptions.openClass
-            });
+            $(menuOptions.menuId).accessibleMegaMenu(menuOptions);
         };
     });
 })(jQuery);
