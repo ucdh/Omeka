@@ -36,7 +36,7 @@ if (!Omeka) {
         Omeka.megaMenu = function(menuId, customMenuOptions) {
 
             if (typeof menuId === 'undefined') { 
-                menuId = 'primary-nav';
+                menuId = '#primary-nav';
             }
             
             var menuOptions = {
