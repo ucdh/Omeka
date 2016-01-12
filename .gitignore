@@ -1,13 +1,13 @@
 # Root .htaccess
-/.htaccess
+# /.htaccess
 
 # dist directory
 /dist/
 
 # Config files
-/db.ini
-/application/config/config.ini
-/application/tests/config.ini
+# /db.ini
+# /application/config/config.ini
+# /application/tests/config.ini
 
 # Log files
 /application/logs/errors.log
