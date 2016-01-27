@@ -19,3 +19,6 @@
 [submodule "themes/emiglio"]
 	path = themes/emiglio
 	url = https://github.com/ucdh/theme-emiglio.git
+[submodule "plugins/ShortcodeCarousel"]
+	path = plugins/ShortcodeCarousel
+	url = https://github.com/ucdh/plugin-ShortcodeCarousel.git
